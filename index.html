@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binary Signal Dashboard</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #181818;
+      border: 1px solid #333;
+      border-radius: 16px;
+      padding: 24px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+    .broker-title {
+      font-size: 14px;
+      color: #ff3b30;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+    .pair-title { font-size: 18px; font-weight: bold; margin-bottom: 5px; }
+    .timeframe { color: #aaa; font-size: 14px; margin-bottom: 20px; }
+    .signal-circle {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid #ff3b30;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      font-size: 50px;
+      color: #ff3b30;
+      background: rgba(255, 59, 48, 0.1);
+    }
+    .btn-sell {
+      background-color: #ff3b30;
+      color: white;
+      padding: 12px 0;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+    .stats-container { display: flex; justify-content: space-between; gap: 10px; }
+    .stat-box {
+      background: #242424;
+      padding: 10px;
+      border-radius: 8px;
+      flex: 1;
+    }
+    .stat-label { font-size: 10px; color: #888; text-transform: uppercase; margin-bottom: 4px; }
+    .stat-value { font-size: 15px; font-weight: bold; color: #4cd964; }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="broker-title">Quotex Broker Signal</div>
+    <div class="pair-title">Signal for: EUR/JPY OTC</div>
+    <div class="timeframe">Timeframe: 1 Minute</div>
+
+    <div class="signal-circle" id="signalIcon">↘</div>
+
+    <div class="btn-sell" id="signalText">SELL (SHORT)</div>
+
+    <div class="stats-container">
+      <div class="stat-box">
+        <div class="stat-label">Signal Strength</div>
+        <div class="stat-value" style="color: #ff9500;">5 / 5</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">Win Rate</div>
+        <div class="stat-value">91.4%</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
